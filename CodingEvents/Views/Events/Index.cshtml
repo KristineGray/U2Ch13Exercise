@@ -1,6 +1,4 @@
-﻿@* 4. Replace the ul with a table to display event names and descriptions.*@
-
-<h1>Coding Events</h1>
+﻿<h1>Coding Events</h1>
 
 <p>
     <a asp-controller="Events" asp-action="Add">Add Event</a>
@@ -11,10 +9,26 @@
     <p>No events yet!</p>
 }
 
-<ul>
+@* 4. Replace the ul with a table to display event names and descriptions.*@
+
+<table>
+    <tr>
+        <th>Event Name</th>
+        <th>Description</th>
+    </tr>
+    @foreach (KeyValuePair<string, string> eventData in ViewBag.events)
+    {
+    <tr>
+        <td>@eventData.Key</td>
+        <td>@eventData.Value</td>
+    </tr>
+    }
+</table>
+
+@*<ul>
     @foreach (string name in ViewBag.events)
     {
         <li>@name</li>
     }
-</ul>
+</ul>*@
 

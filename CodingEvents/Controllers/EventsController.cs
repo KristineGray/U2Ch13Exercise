@@ -9,7 +9,9 @@ namespace CodingEvents.Controllers
     public class EventsController : Controller
     {
         // 1. Let’s convert our Events list to a Dictionary.
-        private static List<string> Events = new List<string>();
+            // Dictionary contains name of event & description
+        private static Dictionary<string, string> Events = new Dictionary<string, string>();
+
 
         // GET: /<controller>/
         public IActionResult Index()

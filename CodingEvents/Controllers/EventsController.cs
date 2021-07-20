@@ -8,6 +8,7 @@ namespace CodingEvents.Controllers
 {
     public class EventsController : Controller
     {
+        // 1. Let’s convert our Events list to a Dictionary.
         private static List<string> Events = new List<string>();
 
         // GET: /<controller>/
@@ -24,6 +25,7 @@ namespace CodingEvents.Controllers
             return View();
         }
 
+        // 3. Add the description parameter to the NewEvent action method and within the method, add the new event key/value pair to the Events dictionary.
         [HttpPost]
         [Route("/Events/Add")]
         public IActionResult NewEvent(string name)

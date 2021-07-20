@@ -30,9 +30,9 @@ namespace CodingEvents.Controllers
         // 3. Add the description parameter to the NewEvent action method and within the method, add the new event key/value pair to the Events dictionary.
         [HttpPost]
         [Route("/Events/Add")]
-        public IActionResult NewEvent(string name)
+        public IActionResult NewEvent(string inputName, string inputDescription)
         {
-            Events.Add(name);
+            Events.Add(inputName, inputDescription);
             return Redirect("/Events");
         }
     }

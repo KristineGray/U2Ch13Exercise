@@ -23,6 +23,10 @@ namespace CodingEvents.Data
         }
 
         // retrieve single event
+        public static Event GetByID(int id)
+        {
+            return Events[id];
+        }
 
         // remove event
     }

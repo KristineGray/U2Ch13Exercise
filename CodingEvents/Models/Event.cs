@@ -29,5 +29,9 @@ namespace CodingEvents.Models
         {
             return obj is Event @event && ID == @event.ID;
         }
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(ID);
+        }
     }
 }

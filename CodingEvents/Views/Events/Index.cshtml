@@ -16,11 +16,10 @@
         <th>Event Name</th>
         <th>Description</th>
     </tr>
-    @foreach (KeyValuePair<string, string> eventData in ViewBag.events)
+    @foreach (Event eventData in ViewBag.events)
     {
     <tr>
-        <td>@eventData.Key</td>
-        <td>@eventData.Value</td>
+        <td>@eventData</td>
     </tr>
     }
 </table>

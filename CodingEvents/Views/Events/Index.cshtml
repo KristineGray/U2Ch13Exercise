@@ -18,13 +18,13 @@
         <th>Event Name</th>
         <th>Description</th>
     </tr>
-    @foreach (Event eventData in ViewBag.events)
+    @foreach (var evt in ViewBag.events)
     {
     <tr>
-        <td>@eventData.ID</td>
-        <td>@eventData.Name</td>
-        <td>@eventData.Description</td>
-        <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@eventData.ID">Edit Event</a></td>
+        <td>@evt.ID</td>
+        <td>@evt.Name</td>
+        <td>@evt.Description</td>
+        <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@evt.ID">Edit Event</a></td>
     </tr>
     }
 </table>

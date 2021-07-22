@@ -7,10 +7,10 @@ namespace CodingEvents.Models
 {
     public class Event
     {
-        private static int nextID = 1;
         public string Name { get; set; }
         public string Description { get; set; }
         public int ID { get; }
+        private static int nextID = 1;
 
         public Event()
         {
@@ -21,6 +21,8 @@ namespace CodingEvents.Models
         {
             Name = name;
             Description = description;
+            ID = nextID;
+            nextID++;
         }
 
         public override string ToString()

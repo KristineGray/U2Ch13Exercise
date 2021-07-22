@@ -27,12 +27,11 @@ namespace CodingEvents.Controllers
             return View();
         }
 
-        
         [HttpPost]
         [Route("/Events/Add")]
-        public IActionResult NewEvent(string inputName, string inputDescription)
+        public IActionResult NewEvent(string inputName)
         {
-            Events.Add(inputName, inputDescription);
+            Events.Add(new Event(inputName));
             return Redirect("/Events");
         }
     }

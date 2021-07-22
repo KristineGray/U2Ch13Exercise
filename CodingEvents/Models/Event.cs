@@ -12,12 +12,15 @@ namespace CodingEvents.Models
         public string Description { get; set; }
         public int ID { get; }
 
-        public Event(string name, string description)
+        public Event()
+        {
+            ID = nextID;
+            nextID++;
+        }
+        public Event(string name, string description) : this()
         {
             Name = name;
             Description = description;
-            ID = nextID;
-            nextID++;
         }
 
         public override string ToString()

@@ -6,8 +6,8 @@
 <h1>Event Editing</h1>>
 <form method="post" action="/events/edit">
     <label for="Name">Event Name</label>
-    <input type="text" name="Name" id="inputName" />
+    <input type="text" name="Name" id="inputName" value="@ViewBag.eventToEdit.Name"/>
     <label for="Description">Event Description</label>
-    <input type="text" name="Description" id="inputDescription" />
+    <input type="text" name="Description" id="inputDescription" value="@ViewBag.eventToEdit.Description"/>
     <input type="submit" value="Edit Event" />
 </form>

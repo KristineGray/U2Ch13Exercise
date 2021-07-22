@@ -24,7 +24,6 @@ namespace CodingEvents.Models
         {
             return Name;
         }
-
         public override bool Equals(object obj)
         {
             return obj is Event @event && ID == @event.ID;

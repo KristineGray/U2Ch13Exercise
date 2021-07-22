@@ -13,12 +13,14 @@
 
 <table>
     <tr>
+        <th>Event ID</th>
         <th>Event Name</th>
         <th>Description</th>
     </tr>
     @foreach (Event eventData in ViewBag.events)
     {
     <tr>
+        <td>@eventData.ID</td>
         <td>@eventData.Name</td>
         <td>@eventData.Description</td>
     </tr>

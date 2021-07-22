@@ -3,3 +3,18 @@
 *@
 @{
 }
+
+<h1>Delete Events</h1>
+
+<form method="post">
+    @foreach(Event evt in ViewBag.events)
+     {
+        <div class="form-group">
+            <label>
+                <span>@evt.Name</span>
+                <input type="checkbox" name="eventIDs" value="evt.ID" class="form-control"/>
+            </label>
+        </div>
+     }
+    <input type="submit" name="Delete Selected Events" value="btn btn-danger" />
+</form>

@@ -54,6 +54,7 @@ namespace CodingEvents.Controllers
         {
             Event eventToEdit = EventData.GetByID(eventID);
             ViewBag.eventToEdit = eventToEdit;
+            ViewBag.title = $"Edit Event {eventToEdit.Name}(id = {eventToEdit.ID})";
             return View();
         }
 

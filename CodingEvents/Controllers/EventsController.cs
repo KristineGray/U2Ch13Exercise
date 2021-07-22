@@ -53,8 +53,8 @@ namespace CodingEvents.Controllers
         {
 
         }
-
-        [HttpPost]
+        
+        [HttpPost("/Events/Edit")]
         public IActionResult SubmitEditEventForm(int eventID, string name, string description)
         {
 

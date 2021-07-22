@@ -17,6 +17,10 @@ namespace CodingEvents.Data
             Events.Add(newEvent.ID, newEvent);
         }
         // retrieve events
+        public static IEnumerable<Event> GetAll()
+        {
+            return Events.Values;
+        }
 
         // retrieve single event
 

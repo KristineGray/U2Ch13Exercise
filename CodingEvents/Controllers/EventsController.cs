@@ -61,7 +61,10 @@ namespace CodingEvents.Controllers
         [HttpPost("/Events/Edit")]
         public IActionResult SubmitEditEventForm(int eventID, string name, string description)
         {
-
+            Event eventToEdit = EventData.GetByID(eventID);
+            eventToEdit.Name = name;
+            eventToEdit.Description = description;
+            return Redirect("/Events");
         }
     }
 }

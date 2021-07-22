@@ -55,7 +55,7 @@ namespace CodingEvents.Controllers
             // a. Use an EventData method to find the event object with the given eventId
             Event eventToEdit = EventData.GetByID(eventID);
             // b. Put the event object in ViewBag
-            
+            ViewBag.eventToEdit = eventToEdit;
             // c. Return the appropriate view
 
         }

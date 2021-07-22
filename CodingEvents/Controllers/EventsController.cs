@@ -49,6 +49,7 @@ namespace CodingEvents.Controllers
             return Redirect("/Events");
         }
 
+        [Route("/Events/Edit/{eventID?}")]
         public IActionResult Edit(int eventID)
         {
 

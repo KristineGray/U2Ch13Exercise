@@ -52,9 +52,14 @@ namespace CodingEvents.Controllers
         [Route("/Events/Edit/{eventID?}")]
         public IActionResult Edit(int eventID)
         {
+            // a. Use an EventData method to find the event object with the given eventId
+            Event eventToEdit = EventData.GetByID(eventID);
+            // b. Put the event object in ViewBag
+            
+            // c. Return the appropriate view
 
         }
-        
+
         [HttpPost("/Events/Edit")]
         public IActionResult SubmitEditEventForm(int eventID, string name, string description)
         {

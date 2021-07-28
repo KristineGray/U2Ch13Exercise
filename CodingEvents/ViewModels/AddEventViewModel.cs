@@ -28,7 +28,7 @@ namespace CodingEvents.ViewModels
 
         public bool IsTrue { get { return true; } }
         
-        [Required]
+        [Required(ErrorMessage ="Must include whether or not registration is required")]
         [Compare(nameof(IsTrue), ErrorMessage = "Event must require attendee registration")]
         public bool IsRegistrationRequired { get; set; }
     }

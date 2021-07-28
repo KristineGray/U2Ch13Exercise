@@ -12,6 +12,7 @@ namespace CodingEvents.Models
         public string ContactEmail { get; set; }
         public string Location { get; set; }
         public int NumAttending { get; set; }
+        public bool IsRegistrationRequired { get; set; }
 
         public int ID { get; }
         private static int nextID = 1;

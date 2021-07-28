@@ -25,5 +25,11 @@ namespace CodingEvents.ViewModels
         [Required(ErrorMessage ="Number of attendees for event is required")]
         [Range(0, 100000, ErrorMessage ="Number of attendees must be a number between 0 and 100,000")]
         public int NumAttending { get; set; }
+
+        public bool IsTrue { get { return true; } }
+        
+        [Required]
+        [Compare(nameof(IsTrue), ErrorMessage = "Event must require attendee registration")]
+        public bool IsRegistrationRequired { get; set; }
     }
 }

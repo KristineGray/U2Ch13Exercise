@@ -1,5 +1,4 @@
 ﻿@using CodingEvents.Models
-
 @model List<Event>
 
 <h1>Coding Events</h1>
@@ -23,6 +22,8 @@ else
             <th>Event Name</th>
             <th>Description</th>
             <th>Contact Email</th>
+            <th>Location</th>
+            <th>Number of Attendees</th>
         </tr>
         @foreach (var evt in Model)
         {
@@ -31,6 +32,8 @@ else
                 <td>@evt.Name</td>
                 <td>@evt.Description</td>
                 <td>@evt.ContactEmail</td>
+                <td>@evt.Location</td>
+                <td>@evt.NumAttending</td>
                 <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@evt.ID">Edit Event</a></td>
             </tr>
         }

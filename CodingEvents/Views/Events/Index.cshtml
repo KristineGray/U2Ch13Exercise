@@ -24,6 +24,7 @@ else
             <th>Contact Email</th>
             <th>Location</th>
             <th>Number of Attendees</th>
+            <th>Registration Required</th>
         </tr>
         @foreach (var evt in Model)
         {
@@ -34,6 +35,16 @@ else
                 <td>@evt.ContactEmail</td>
                 <td>@evt.Location</td>
                 <td>@evt.NumAttending</td>
+                <td>
+                    @if (evt.IsRegistrationRequired == true)
+                    {
+                        <span>Yes</span>
+                    }
+                    else
+                    { 
+                        <span>No</span>
+                    }
+                </td>
                 <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@evt.ID">Edit Event</a></td>
             </tr>
         }

@@ -19,11 +19,11 @@ namespace CodingEvents.ViewModels
         [EmailAddress]
         public string ContactEmail { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Location for event is required")]
         public string Location { get; set; }
 
-        [Required]
-        [Range(0, 100000)]
+        [Required(ErrorMessage ="Number of attendees for event is required")]
+        [Range(0, 100000, ErrorMessage ="Number of attendees must be a number between 0 and 100,000")]
         public int NumAttending { get; set; }
     }
 }

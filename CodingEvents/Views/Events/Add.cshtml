@@ -29,5 +29,13 @@
         <input asp-for="NumAttending" />
         <span asp-validation-for="NumAttending"></span>
     </div>
+    <div class="form-group">
+        <label asp-for="IsRegistrationRequired"></label>
+        <input type="radio" asp-for="IsRegistrationRequired" value="true" />
+        <label>True</label>
+        <input type="radio" asp-for="IsRegistrationRequired" value="false"/>
+        <label>False</label>
+        <span asp-validation-for="NumAttending"></span>
+    </div>
     <input type="submit" value="Add Event" />
 </form>

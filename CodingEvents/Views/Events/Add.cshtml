@@ -4,9 +4,13 @@
 <h1>Add Event</h1>
 
 <form method="post">
-    <label for="Name">Event Name</label>
-    <input type="text" name="Name" id="inputName"/>
-    <label for="Description">Event Description</label>
-    <input type="text" name="Description" id="inputDescription"/>
+    <div asp-controller="Events" asp-actions="Add" class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" />
+    </div>
     <input type="submit" value="Add Event" />
 </form>

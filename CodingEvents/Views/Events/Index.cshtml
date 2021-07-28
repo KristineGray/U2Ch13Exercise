@@ -15,21 +15,26 @@
 {
     <p>No events yet!</p>
 }
+else
+{
+    <table>
+        <tr>
+            <th>Event ID</th>
+            <th>Event Name</th>
+            <th>Description</th>
+            <th>Contact Email</th>
+        </tr>
+        @foreach (var evt in Model)
+        {
+            <tr>
+                <td>@evt.ID</td>
+                <td>@evt.Name</td>
+                <td>@evt.Description</td>
+                <td>@evt.ContactEmail</td>
+                <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@evt.ID">Edit Event</a></td>
+            </tr>
+        }
+    </table>
+}
 
-<table>
-    <tr>
-        <th>Event ID</th>
-        <th>Event Name</th>
-        <th>Description</th>
-    </tr>
-    @foreach (var evt in Model)
-    {
-    <tr>
-        <td>@evt.ID</td>
-        <td>@evt.Name</td>
-        <td>@evt.Description</td>
-        <td><a asp-controller="Events" asp-action="Edit" asp-route-id="@evt.ID">Edit Event</a></td>
-    </tr>
-    }
-</table>
 

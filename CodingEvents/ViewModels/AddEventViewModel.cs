@@ -34,6 +34,13 @@ namespace CodingEvents.ViewModels
         [Compare(nameof(IsTrue), ErrorMessage = "Event must require attendee registration")]
         public bool IsRegistrationRequired { get; set; }
         public EventType Type { get; set; }
-        public List<SelectListItem> EventTypes { get; set; }
+        public List<SelectListItem> EventTypes { get; set; } = new List<SelectListItem>
+        {
+            new SelectListItem(EventType.Conference.ToString(), ((int)EventType.Conference).ToString()),
+            new SelectListItem(EventType.Meetup.ToString(), ((int)EventType.Meetup).ToString()),
+            new SelectListItem(EventType.Workshop.ToString(), ((int)EventType.Workshop).ToString()),
+            new SelectListItem(EventType.Social.ToString(), ((int)EventType.   Social).ToString())
+
+        };
     }
 }

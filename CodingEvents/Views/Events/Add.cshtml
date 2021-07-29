@@ -4,6 +4,10 @@
 <h1>Add Event</h1>
 
 <form method="post">
+    <div class="form-group">
+        <label asp-for="Type">Event Type</label>
+        <select asp-for="Type" asp-items="Model.EventTypes"/>
+    </div>
     <div asp-controller="Events" asp-actions="Add" class="form-group">
         <label asp-for="Name"></label>
         <input asp-for="Name" />
@@ -33,12 +37,7 @@
         <label asp-for="IsRegistrationRequired"></label>
         <input asp-for="IsRegistrationRequired" />
         <span asp-validation-for="IsRegistrationRequired"></span>
-        @*<label asp-for="IsRegistrationRequired"></label>
-        <input type="radio" asp-for="IsRegistrationRequired" value="true" />
-        <label>True</label>
-        <input type="radio" asp-for="IsRegistrationRequired" value="false"/>
-        <label>False</label>
-        <span asp-validation-for="IsRegistrationRequired"></span>*@
+
     </div>
     <input type="submit" value="Add Event" />
 </form>

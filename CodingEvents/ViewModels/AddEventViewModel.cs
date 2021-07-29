@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CodingEvents.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -31,5 +32,6 @@ namespace CodingEvents.ViewModels
         [Required(ErrorMessage ="Must include whether or not registration is required")]
         [Compare(nameof(IsTrue), ErrorMessage = "Event must require attendee registration")]
         public bool IsRegistrationRequired { get; set; }
+        public EventType Type { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CodingEvents.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -33,5 +34,6 @@ namespace CodingEvents.ViewModels
         [Compare(nameof(IsTrue), ErrorMessage = "Event must require attendee registration")]
         public bool IsRegistrationRequired { get; set; }
         public EventType Type { get; set; }
+        public List<SelectListItem> EventTypes { get; set; }
     }
 }

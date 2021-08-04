@@ -1,1 +1,18 @@
-﻿<h1>Welcome to the EventCategoryController's Index page!</h1>
+﻿@using CodingEvents.Models
+@model List<EventCategory>
+
+<h1>Event Categories</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    @foreach(EventCategory eventCategory in Model)
+    {
+        <tr>
+            <td>@eventCategory.Id</td>
+            <td>@eventCategory.Name</td>
+        </tr>
+    }
+</table>

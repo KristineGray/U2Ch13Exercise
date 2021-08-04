@@ -31,5 +31,21 @@ namespace CodingEvents.Controllers
             AddEventCategoryViewModel addEventCategoryViewModel = new AddEventCategoryViewModel();
             return View(addEventCategoryViewModel);
         }
+
+        [HttpPost]
+        public IActionResult ProcessCreateEventCategoryForm(AddEventCategoryViewModel addEventCategoryViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                EventCategory newEventCategory = new EventCategory
+                {
+                    Name = addEventCategoryViewModel.Name
+                };
+                context.EventCategories.Add(newEventCategory);
+                context.SaveChanges();
+                return Redirect("/Index");
+            }
+            return View(addEventCategoryViewModel);
+        }
     }
 }

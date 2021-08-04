@@ -10,10 +10,16 @@ namespace CodingEvents.Controllers
 {
     public class EventCategoryController : Controller
     {
-        private EventDbContext _context;
+        private EventDbContext context;
+
+        public EventCategoryController(EventDbContext dbcontext)
+        {
+            context = dbcontext;
+        }
+
         public IActionResult Index()
         {
-            List<EventCategory> eventCategories = _context.EventCategories.ToList();
+            List<EventCategory> eventCategories = context.EventCategories.ToList();
             return View(eventCategories);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using CodingEvents.Data;
 using CodingEvents.Models;
+using CodingEvents.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,18 @@ namespace CodingEvents.Controllers
             context = dbContext;
         }
 
+        [HttpGet]
         public IActionResult Index()
         {
             List<EventCategory> eventCategories = context.EventCategories.ToList();
             return View(eventCategories);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            AddEventCategoryViewModel addEventCategoryViewModel = new AddEventCategoryViewModel();
+            return View(addEventCategoryViewModel);
         }
     }
 }

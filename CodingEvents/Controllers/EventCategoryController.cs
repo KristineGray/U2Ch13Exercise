@@ -12,9 +12,9 @@ namespace CodingEvents.Controllers
     {
         private EventDbContext context;
 
-        public EventCategoryController(EventDbContext dbcontext)
+        public EventCategoryController(EventDbContext dbContext)
         {
-            context = dbcontext;
+            context = dbContext;
         }
 
         public IActionResult Index()

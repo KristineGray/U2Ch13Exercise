@@ -15,21 +15,16 @@ namespace CodingEvents.Models
         public bool IsRegistrationRequired { get; set; }
         public EventType Type { get; set; }
 
-        public int ID { get; }
-        private static int nextID = 1;
+        public int ID { get; set; }
 
         public Event()
         {
-            ID = nextID;
-            nextID++;
         }
-        public Event(string name, string description, string contactEmail) : this()
+        public Event(string name, string description, string contactEmail)
         {
             Name = name;
             Description = description;
             ContactEmail = contactEmail;
-            ID = nextID;
-            nextID++;
         }
 
         public override string ToString()

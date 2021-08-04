@@ -9,6 +9,12 @@ namespace CodingEvents.Models
     {
         public string Name { get; set; }
         public string Description { get; set; }
+        public string ContactEmail { get; set; }
+        public string Location { get; set; }
+        public int NumAttending { get; set; }
+        public bool IsRegistrationRequired { get; set; }
+        public EventType Type { get; set; }
+
         public int ID { get; }
         private static int nextID = 1;
 
@@ -17,10 +23,11 @@ namespace CodingEvents.Models
             ID = nextID;
             nextID++;
         }
-        public Event(string name, string description) : this()
+        public Event(string name, string description, string contactEmail) : this()
         {
             Name = name;
             Description = description;
+            ContactEmail = contactEmail;
             ID = nextID;
             nextID++;
         }

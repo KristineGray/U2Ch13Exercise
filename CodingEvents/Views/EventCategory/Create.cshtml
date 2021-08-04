@@ -1,9 +1,9 @@
 ﻿@using CodingEvents.ViewModels
 @model AddEventCategoryViewModel
 
-<h1>This is the Create page for Event Categories</h1>
+<h1>Create An Event Category</h1>
 
-<form asp-controller="EventCategory" asp-action="Create">
+<form asp-controller="EventCategory" asp-action="ProcessCreateEventCategoryForm" method="post">
     <label asp-for="Name"></label>
     <input asp-for="Name" />
     <span asp-validation-for="Name"></span>

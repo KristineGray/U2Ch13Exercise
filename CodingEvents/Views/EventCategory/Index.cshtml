@@ -1,15 +1,14 @@
-﻿@using CodingEvents.Models
-@model List<EventCategory>
+﻿@model List<EventCategory>
 
 <h1>Event Categories</h1>
 
 @if (Model.Count == 0)
 {
-    <p>No Event Categories Yet!</p>
+    <p class="text-info">No Event Categories Yet!</p>
 }
 else
 {
-    <table>
+    <table class="table table-bordered table-striped">
         <tr>
             <th>ID</th>
             <th>Name</th>

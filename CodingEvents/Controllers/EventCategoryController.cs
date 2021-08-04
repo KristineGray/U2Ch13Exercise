@@ -44,6 +44,8 @@ namespace CodingEvents.Controllers
                 context.EventCategories.Add(newEventCategory);
                 context.SaveChanges();
                 return Redirect("/EventCategory/Index");
+                //return RedirectToAction("Index", "EventCategory");
+
             }
             return View("Create", addEventCategoryViewModel);
         }
